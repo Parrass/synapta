@@ -1,10 +1,48 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+ 
 @layer base {
   :root {
+    --background: 220 16% 96%;
+    --foreground: 222 47% 11%;
+ 
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+ 
+    --primary: 187 79% 28%;
+    --primary-foreground: 210 40% 98%;
+ 
+    --secondary: 264 30% 41%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+ 
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+ 
+    --accent: 36 100% 65%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --success: 151 67% 57%;
+    --success-foreground: 210 40% 98%;
+
+    --warning: 41 100% 70%;
+    --warning-foreground: 210 40% 98%;
+ 
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 187 79% 28%;
+ 
+    --radius: 0.5rem;
+
     /* Cores primárias Synapta */
     --deep-teal: 10 123 131;
     --rich-purple: 90 75 135;
@@ -24,37 +62,6 @@
     --warning-yellow: 255 209 102;
     --error-red: 237 106 90;
 
-    /* Shadcn Variables - Light Mode */
-    --background: 0 0% 100%;
-    --foreground: var(--dark-gray);
-
-    --card: 0 0% 100%;
-    --card-foreground: var(--dark-gray);
-
-    --popover: 0 0% 100%;
-    --popover-foreground: var(--dark-gray);
-
-    --primary: var(--deep-teal);
-    --primary-foreground: 0 0% 98%;
-
-    --secondary: var(--light-gray);
-    --secondary-foreground: var(--dark-gray);
-
-    --muted: var(--light-gray);
-    --muted-foreground: var(--medium-gray);
-
-    --accent: var(--light-gray);
-    --accent-foreground: var(--dark-gray);
-
-    --destructive: var(--error-red);
-    --destructive-foreground: 0 0% 98%;
-
-    --border: var(--light-gray);
-    --input: var(--light-gray);
-    --ring: var(--deep-teal);
-
-    --radius: 0.5rem;
-
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: var(--medium-gray);
     --sidebar-primary: var(--dark-gray);
@@ -64,8 +71,42 @@
     --sidebar-border: var(--light-gray);
     --sidebar-ring: var(--deep-teal);
   }
-
+ 
   .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+ 
+    --card: 222 47% 15%;
+    --card-foreground: 210 40% 98%;
+ 
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+ 
+    --primary: 187 79% 38%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+ 
+    --secondary: 264 30% 61%;
+    --secondary-foreground: 210 40% 98%;
+ 
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20.2% 65.1%;
+ 
+    --accent: 36 100% 65%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+ 
+    --destructive: 0 62.8% 40.6%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --success: 151 67% 47%;
+    --success-foreground: 210 40% 98%;
+    
+    --warning: 41 100% 60%;
+    --warning-foreground: 210 40% 98%;
+ 
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 187 79% 38%;
+
     /* Cores de background para modo escuro */
     --background: var(--dark-gray);
     --foreground: var(--off-white);
@@ -105,20 +146,26 @@
     --sidebar-ring: var(--light-teal);
   }
 }
-
+ 
 @layer base {
   * {
     @apply border-border;
   }
-
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
   }
-
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
+  }
+  h1 {
+    @apply text-3xl font-bold;
+  }
+  h2 {
+    @apply text-2xl font-semibold;
+  }
+  h3 {
+    @apply text-xl font-medium;
   }
 }
 

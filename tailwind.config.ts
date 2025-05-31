@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,6 +19,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'montserrat': ['Montserrat', 'sans-serif'],
+				'open-sans': ['Open Sans', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,7 +66,29 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				success: {
+					DEFAULT: 'hsl(var(--success))',
+					foreground: 'hsl(var(--success-foreground))'
+				},
+				warning: {
+					DEFAULT: 'hsl(var(--warning))',
+					foreground: 'hsl(var(--warning-foreground))'
+				},
+				// Cores específicas da Synapta
+				'deep-teal': 'rgb(var(--deep-teal))',
+				'rich-purple': 'rgb(var(--rich-purple))',
+				'light-teal': 'rgb(var(--light-teal))',
+				'lavender': 'rgb(var(--lavender))',
+				'amber': 'rgb(var(--amber))',
+				'coral': 'rgb(var(--coral))',
+				'dark-gray': 'rgb(var(--dark-gray))',
+				'medium-gray': 'rgb(var(--medium-gray))',
+				'light-gray': 'rgb(var(--light-gray))',
+				'off-white': 'rgb(var(--off-white))',
+				'success-green': 'rgb(var(--success-green))',
+				'warning-yellow': 'rgb(var(--warning-yellow))',
+				'error-red': 'rgb(var(--error-red))',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
