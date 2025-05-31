@@ -26,6 +26,7 @@ const Header = () => {
     { href: "/#about", label: "Sobre", external: true },
     { href: "/#contact", label: "Contato", external: true },
     { href: "/assets", label: "Assets", external: false },
+    { href: "/dashboard", label: "Dashboard", external: false },
   ];
 
   const isActive = (href: string) => {
