@@ -52,8 +52,8 @@ const ColorPalette = () => {
   return (
     <section>
       <div className="mb-12">
-        <h2 className="text-3xl font-bold text-white mb-4">Paleta de Cores</h2>
-        <p className="text-gray-400">
+        <h2 className="text-3xl font-bold text-foreground mb-4">Paleta de Cores</h2>
+        <p className="text-muted-foreground">
           Nosso sistema de cores é baseado nas diretrizes da identidade visual Synapta, 
           garantindo harmonia e consistência em toda a aplicação.
         </p>
@@ -61,13 +61,13 @@ const ColorPalette = () => {
 
       <div className="grid gap-8">
         {colorGroups.map((group, groupIndex) => (
-          <div key={groupIndex} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-            <h3 className="text-xl font-semibold text-white mb-6">{group.title}</h3>
+          <div key={groupIndex} className="bg-card backdrop-blur-sm rounded-2xl p-6 border border-border">
+            <h3 className="text-xl font-semibold text-foreground mb-6">{group.title}</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {group.colors.map((color, colorIndex) => (
                 <div key={colorIndex} className="group">
                   <div 
-                    className="w-full h-24 rounded-lg mb-3 border border-white/10 relative overflow-hidden"
+                    className="w-full h-24 rounded-lg mb-3 border border-border relative overflow-hidden"
                     style={{ backgroundColor: color.hex }}
                   >
                     <Button
@@ -79,9 +79,9 @@ const ColorPalette = () => {
                       <Copy className="w-3 h-3" />
                     </Button>
                   </div>
-                  <h4 className="font-medium text-white text-sm mb-1">{color.name}</h4>
-                  <p className="text-gray-400 text-xs font-mono">{color.hex}</p>
-                  <p className="text-gray-500 text-xs">--{color.css}</p>
+                  <h4 className="font-medium text-foreground text-sm mb-1">{color.name}</h4>
+                  <p className="text-muted-foreground text-xs font-mono">{color.hex}</p>
+                  <p className="text-muted-foreground/70 text-xs">--{color.css}</p>
                 </div>
               ))}
             </div>
